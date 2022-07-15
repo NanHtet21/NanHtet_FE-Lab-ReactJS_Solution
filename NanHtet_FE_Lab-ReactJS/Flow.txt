@@ -1,0 +1,38 @@
+Routers
+-> Route -> path = "/"-> ShowData
+-> Route -> path = "/add"-> ExpenseTracker
+
+DataList
+{
+ id:number;
+ product:string,
+ price:number,
+ payeeName:string,
+ setDate:string
+ }
+ 
+ShowData
+item->database
+data->getDataFromServer
+rahulspent1
+rameshspent1
+
+shares=> data->decide rahul/other person spent
+
+service.ts
+ const axios = require('axios');
+ 
+ ->getDataFromServer
+	-> axios.get(http://localhost:3000/items).then(response=>response.data);
+	
+ ->pushDataToUser
+	-> axios.post(http://localhost:3000/items",newPurchase,{headers:{
+	'content-Type':'application/json'
+	}}
+	)
+	.then(response=>response.data);
+	
+export{
+getDataFromServer,
+pushDataToUser
+}	
